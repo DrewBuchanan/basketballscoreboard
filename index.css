@@ -1,8 +1,56 @@
-body {
+* {
     margin: 0;
 }
 
+@font-face {
+    font-family: numerals;
+    src: url(font/digital-7.ttf);
+}
+
+body {
+    background-color: #1B244A;
+}
+
 .container {
+    width: 575px;
+    margin: 80px auto 0px auto;
     display: flex;
     justify-content: space-around;
 }
+
+.teamname {
+    color: #EEEEEE;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.score, .incrementbutton {
+    font-family: numerals;
+}
+
+.score {
+    width: 150px;
+    background-color: #080001;
+    color: #F94F6D;
+    padding: 15px 0px;
+    line-height: 90px;
+    font-size: 90px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.incrementbutton {
+    height: 45px;
+    width: 45px;
+    margin: 20px 1.25px 0px 1.25px;
+    font-size: 18px;
+    color: #9aabd8;
+    background-color: #1B244A;
+    border-radius: 5px;
+    border: 2px solid #9AABD8;
+}
+
+/*TODO: Button click effect*/
