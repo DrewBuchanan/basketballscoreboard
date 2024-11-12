@@ -2,6 +2,10 @@
     margin: 0;
 }
 
+.debug {
+    border: 2px solid pink;
+}
+
 @font-face {
     font-family: numerals;
     src: url(font/digital-7.ttf);
