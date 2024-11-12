@@ -42,9 +42,17 @@ body {
     border-radius: 5px;
 }
 
-.incrementbutton {
-    height: 45px;
+.increment {
     width: 45px;
+}
+
+#resetbutton {
+    width: 100px;
+}
+
+.button {
+    height: 45px;
+    
     margin: 20px 1.25px 0px 1.25px;
     font-size: 18px;
     color: #9aabd8;

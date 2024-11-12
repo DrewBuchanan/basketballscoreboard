@@ -24,3 +24,10 @@ function setHomeScoreText() {
 function setGuestScoreText() {
     guestScoreDisplay.textContent = guestScore;
 }
+
+function reset() {
+    homeScore = 0;
+    guestScore = 0;
+    setHomeScoreText();
+    setGuestScoreText();
+}
