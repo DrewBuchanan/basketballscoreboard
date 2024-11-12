@@ -1,8 +1,76 @@
-body {
+* {
     margin: 0;
 }
 
+@font-face {
+    font-family: numerals;
+    src: url(font/digital-7.ttf);
+}
+
+body {
+    background-color: #1B244A;
+    padding-top: 80px;
+}
+
 .container {
+    width: 575px;
+    margin: auto;
     display: flex;
     justify-content: space-around;
 }
+
+.team-name {
+    color: #EEEEEE;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#period-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.numeral, .button{
+    font-family: numerals;
+}
+
+.score {
+    width: 150px;
+}
+
+.period {
+    width: 100px;
+}
+
+.numeral {
+    background-color: #080001;
+    color: #F94F6D;
+    text-align: center;
+    border-radius: 5px;
+    margin: 30px auto 0px auto;
+    padding: 15px 0px;
+    line-height: 90px;
+    font-size: 90px;
+}
+
+.increment {
+    width: 45px;
+}
+
+#resetbutton {
+    width: 100px;
+}
+
+.button {
+    height: 45px;
+    margin: 20px 1.25px 0px 1.25px;
+    font-size: 18px;
+    color: #9aabd8;
+    background-color: #1B244A;
+    border-radius: 5px;
+    border: 2px solid #9AABD8;
+}
+
+/*TODO: Button click effect*/

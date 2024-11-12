@@ -4,12 +4,31 @@
     </head>
     <body>
         <div class="container">
-            <div>
-                <h3>HOME</h3>
+            <div id="home-container">
+                <h3 class="team-name">HOME</h3>
+                <h4 class="score numeral" id="home-score">0</h4>
+                <button class="increment button" onclick="home(1)">+ 1</button>
+                <button class="increment button" onclick="home(2)">+ 2</button>
+                <button class="increment button" onclick="home(3)">+ 3</button>
             </div>
-            <div>
-                <h3>GUEST</h3>
+            <div id="period-container">
+                <h3 class="team-name">PERIOD</h3>
+                <h4 class="period numeral" id="period">1</h4>
+                <div id="period-button-container">
+                    <button class="increment button" onclick="incrementPeriod(1)">+</button>
+                    <button class="increment button" onclick="incrementPeriod(-1)">-</button>
+                </div>
             </div>
+            <div id="guest-container">
+                <h3 class="team-name">GUEST</h3>
+                <h4 class="score numeral" id="guest-score">69</h4>
+                <button class="increment button" onclick="guest(1)">+ 1</button>
+                <button class="increment button" onclick="guest(2)">+ 2</button>
+                <button class="increment button" onclick="guest(3)">+ 3</button>
+            </div>
+        </div>
+        <div class="container">
+            <button id="resetbutton" class="button" onclick="reset()">Reset</button>
         </div>
         <script src="index.js"></script>
     </body>
