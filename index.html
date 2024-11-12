@@ -5,15 +5,23 @@
     <body>
         <div class="container">
             <div id="home-container">
-                <h3 class="teamname">HOME</h3>
-                <h4 class="score" id="home-score">0</h4>
+                <h3 class="team-name">HOME</h3>
+                <h4 class="score numeral" id="home-score">0</h4>
                 <button class="increment button" onclick="home(1)">+ 1</button>
                 <button class="increment button" onclick="home(2)">+ 2</button>
                 <button class="increment button" onclick="home(3)">+ 3</button>
             </div>
+            <div id="period-container">
+                <h3 class="team-name">PERIOD</h3>
+                <h4 class="period numeral" id="period">1</h4>
+                <div id="period-button-container">
+                    <button class="increment button" onclick="incrementPeriod(1)">+</button>
+                    <button class="increment button" onclick="incrementPeriod(-1)">-</button>
+                </div>
+            </div>
             <div id="guest-container">
-                <h3 class="teamname">GUEST</h3>
-                <h4 class="score" id="guest-score">69</h4>
+                <h3 class="team-name">GUEST</h3>
+                <h4 class="score numeral" id="guest-score">69</h4>
                 <button class="increment button" onclick="guest(1)">+ 1</button>
                 <button class="increment button" onclick="guest(2)">+ 2</button>
                 <button class="increment button" onclick="guest(3)">+ 3</button>
