@@ -3,23 +3,35 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div class="container">
-            <div id="home-container">
+        <div class="container debug">
+            <div class="vertical-container debug">
+                <button class="button">Start</button>
+                <button class="button">Pause</button>
+            </div>
+            <h4 class="numeral timer">20:00</h4>
+            <div class="vertical-container debug">
+                <input class="timer-minutes-input" placeholder="Minutes">
+                <button class="button">Set</button>
+            </div>
+        </div>
+        <div class="container debug">
+            <div id="home-container" class="debug">
                 <h3 class="team-name">HOME</h3>
                 <h4 class="score numeral" id="home-score">0</h4>
                 <button class="increment button" onclick="home(1)">+ 1</button>
                 <button class="increment button" onclick="home(2)">+ 2</button>
                 <button class="increment button" onclick="home(3)">+ 3</button>
             </div>
-            <div id="period-container">
-                <h3 class="team-name">PERIOD</h3>
+            <div id="period-container" class="debug">
+                <h3 class="period-header">PERIOD</h3>
                 <h4 class="period numeral" id="period">1</h4>
                 <div id="period-button-container">
                     <button class="increment button" onclick="incrementPeriod(1)">+</button>
                     <button class="increment button" onclick="incrementPeriod(-1)">-</button>
                 </div>
+                <button id="resetbutton" class="button" onclick="reset()">Reset All</button>
             </div>
-            <div id="guest-container">
+            <div id="guest-container" class="debug">
                 <h3 class="team-name">GUEST</h3>
                 <h4 class="score numeral" id="guest-score">69</h4>
                 <button class="increment button" onclick="guest(1)">+ 1</button>
@@ -27,8 +39,8 @@
                 <button class="increment button" onclick="guest(3)">+ 3</button>
             </div>
         </div>
-        <div class="container">
-            <button id="resetbutton" class="button" onclick="reset()">Reset</button>
+        <div class="container debug">
+            
         </div>
         <script src="index.js"></script>
     </body>
