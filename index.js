@@ -1,5 +1,7 @@
 let homeScore = 0;
+let homeFouls = 0;
 let guestScore = 0;
+let guestFouls = 0;
 let period = 1;
 
 let minutes = 20;
@@ -7,7 +9,9 @@ let seconds = 0;
 let timer;
 
 const homeScoreDisplay = document.getElementById("home-score");
+const homeFoulsDisplay = document.getElementById("home-fouls");
 const guestScoreDisplay = document.getElementById("guest-score");
+const guestFoulsDisplay = document.getElementById("guest-fouls");
 const periodDisplay = document.getElementById("period");
 const timerDisplay = document.getElementById("timer");
 const timerInput = document.getElementById("timer-input")
@@ -47,7 +51,6 @@ function clock() {
         seconds = 0;
         pauseClock();
         alert("End of period");
-        clearInterval(timer);
     }
 
     setClockText();
@@ -84,11 +87,38 @@ function setPeriodText() {
     periodDisplay.textContent = period;
 }
 
+function setHomeFoulsText() {
+    homeFoulsDisplay.textContent = homeFouls;
+}
+
+function setGuestFoulsText() {
+    guestFoulsDisplay.textContent = guestFouls;
+}
+
 function reset() {
     homeScore = 0;
+    homeFouls = 0;
     guestScore = 0;
+    guestFouls = 0;
     period = 1;
+    minutes = 0;
+    seconds = 0;
+
+    pauseClock();
+    setClockText();
     setHomeScoreText();
+    setHomeFoulsText();
     setGuestScoreText();
+    setGuestFoulsText();
     setPeriodText();
+}
+
+function incrementHomeFouls(amount) {
+    homeFouls = Math.min(Math.max(homeFouls + amount, 0), 99);
+    setHomeFoulsText();
+}
+
+function incrementGuestFouls(amount) {
+    guestFouls = Math.min(Math.max(guestFouls + amount, 0), 99);
+    setGuestFoulsText();
 }

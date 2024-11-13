@@ -21,7 +21,7 @@
                 <button class="increment button" onclick="home(1)">+ 1</button>
                 <button class="increment button" onclick="home(2)">+ 2</button>
                 <button class="increment button" onclick="home(3)">+ 3</button>
-                <h4 class="score numeral" id="guest-fouls">0</h4>
+                <h4 class="score numeral" id="home-fouls">0</h4>
             </div>
             <div id="period-container" class="debug">
                 <h3 class="period-header">PERIOD</h3>
@@ -32,13 +32,13 @@
                 </div>
                 <div class="foul-container debug">
                     <div class="foul-vertical-container right debug">
-                        <button class="increment button">+</button>
-                        <button class="increment button">-</button>
+                        <button class="increment button" onclick="incrementHomeFouls(1)">+</button>
+                        <button class="increment button" onclick="incrementHomeFouls(-1)">-</button>
                     </div>
                     <h3 class="foul-header">FOULS</h3>
                     <div class="foul-vertical-container left debug">
-                        <button class="increment button">+</button>
-                        <button class="increment button">-</button>
+                        <button class="increment button" onclick="incrementGuestFouls(1)">+</button>
+                        <button class="increment button" onclick="incrementGuestFouls(-1)">-</button>
                     </div>
                 </div>
                 <button id="resetbutton" class="button" onclick="reset()">Reset All</button>
