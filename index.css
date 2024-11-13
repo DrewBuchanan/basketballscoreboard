@@ -2,10 +2,6 @@
     margin: 0;
 }
 
-.debug {
-    border: 0px solid pink;
-}
-
 @font-face {
     font-family: numerals;
     src: url(font/digital-7.mono.ttf);
@@ -40,12 +36,21 @@ body {
     margin-top: 10px;
 }
 
-.vertical-container {
+.vertical-container-left, .vertical-container-right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 15%;
     margin: 12px 0px 0px 0px;
+    padding-bottom: 10px;
+}
+
+.vertical-container-left {
+    margin-right: 6px;
+}
+
+.vertical-container-right {
+    margin-left: 6px;
 }
 
 .horizontal-container {
@@ -59,7 +64,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 12px;
-    height: 120px;
+    height: 110px;
 }
 
 .foul-vertical-container-left, .foul-vertical-container-right {
@@ -74,14 +79,6 @@ body {
 
 .foul-vertical-container-right {
     margin-right: -10px;
-}
-
-.left {
-    margin-right: 6px;
-}
-
-.right {
-    margin-left: 6px;
 }
 
 .team-name, .period-header, .foul-header {
@@ -179,5 +176,3 @@ body {
     width: 35px;
     color: #EEEEEE;
 }
-
-/*TODO: Button click effect*/
