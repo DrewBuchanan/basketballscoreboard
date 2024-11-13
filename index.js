@@ -16,8 +16,13 @@ const guestFoulsDisplay = document.getElementById("guest-fouls");
 const guestLead = document.getElementById("guest-lead");
 const periodDisplay = document.getElementById("period");
 const timerDisplay = document.getElementById("timer");
-const timerInput = document.getElementById("timer-input")
+const timerInput = document.getElementById("timer-input");
+const startButton = document.getElementById("start-button");
+const pauseButton = document.getElementById("pause-button");
 
+pauseButton.active = false;
+
+pauseClock();
 calculateLead();
 setHomeScoreText();
 setGuestScoreText();
@@ -25,10 +30,14 @@ setPeriodText();
 
 function startClock() {
     timer = setInterval(clock, 1000);
+    startButton.disabled = true;
+    pauseButton.disabled = false;
 }
 
 function pauseClock() {
     clearInterval(timer);
+    startButton.disabled = false;
+    pauseButton.disabled = true;
 }
 
 function setClock() {
