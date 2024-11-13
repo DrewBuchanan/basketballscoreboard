@@ -18,25 +18,31 @@
             <div id="home-container" class="debug">
                 <h3 class="team-name">HOME</h3>
                 <h4 class="score numeral" id="home-score">0</h4>
-                <button class="increment button" onclick="home(1)">+ 1</button>
-                <button class="increment button" onclick="home(2)">+ 2</button>
-                <button class="increment button" onclick="home(3)">+ 3</button>
+                <div class="horizontal-container debug">
+                    <button class="increment button" onclick="home(1)">+ 1</button>
+                    <button class="increment button" onclick="home(2)">+ 2</button>
+                    <button class="increment button" onclick="home(3)">+ 3</button>
+                </div>
                 <h4 class="score numeral" id="home-fouls">0</h4>
             </div>
             <div id="period-container" class="debug">
                 <h3 class="period-header">PERIOD</h3>
-                <h4 class="period numeral" id="period">1</h4>
+                <div class="horizontal-container">
+                    <h4 id="home-lead" class="debug">◀</h4>
+                    <h4 class="period numeral" id="period">1</h4>
+                    <h4 id="guest-lead" class="debug">▶</h4>
+                </div>
                 <div id="period-button-container">
                     <button class="increment button" onclick="incrementPeriod(1)">+</button>
                     <button class="increment button" onclick="incrementPeriod(-1)">-</button>
                 </div>
                 <div class="foul-container debug">
-                    <div class="foul-vertical-container right debug">
+                    <div class="foul-vertical-container-left debug">
                         <button class="increment button" onclick="incrementHomeFouls(1)">+</button>
                         <button class="increment button" onclick="incrementHomeFouls(-1)">-</button>
                     </div>
                     <h3 class="foul-header">FOULS</h3>
-                    <div class="foul-vertical-container left debug">
+                    <div class="foul-vertical-container-right debug">
                         <button class="increment button" onclick="incrementGuestFouls(1)">+</button>
                         <button class="increment button" onclick="incrementGuestFouls(-1)">-</button>
                     </div>
@@ -46,9 +52,11 @@
             <div id="guest-container" class="debug">
                 <h3 class="team-name">GUEST</h3>
                 <h4 class="score numeral" id="guest-score">0</h4>
-                <button class="increment button" onclick="guest(1)">+ 1</button>
-                <button class="increment button" onclick="guest(2)">+ 2</button>
-                <button class="increment button" onclick="guest(3)">+ 3</button>
+                <div class="horizontal-container">
+                    <button class="increment button" onclick="guest(1)">+ 1</button>
+                    <button class="increment button" onclick="guest(2)">+ 2</button>
+                    <button class="increment button" onclick="guest(3)">+ 3</button>
+                </div>
                 <h4 class="score numeral" id="guest-fouls">0</h4>
             </div>
         </div>

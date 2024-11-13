@@ -10,12 +10,15 @@ let timer;
 
 const homeScoreDisplay = document.getElementById("home-score");
 const homeFoulsDisplay = document.getElementById("home-fouls");
+const homeLead = document.getElementById("home-lead");
 const guestScoreDisplay = document.getElementById("guest-score");
 const guestFoulsDisplay = document.getElementById("guest-fouls");
+const guestLead = document.getElementById("guest-lead");
 const periodDisplay = document.getElementById("period");
 const timerDisplay = document.getElementById("timer");
 const timerInput = document.getElementById("timer-input")
 
+calculateLead();
 setHomeScoreText();
 setGuestScoreText();
 setPeriodText();
@@ -63,11 +66,13 @@ function setClockText() {
 function home(amount) {
     homeScore += amount;
     setHomeScoreText();
+    calculateLead();
 }
 
 function guest(amount) {
     guestScore += amount;
     setGuestScoreText();
+    calculateLead();
 }
 
 function incrementPeriod(amount) {
@@ -111,6 +116,7 @@ function reset() {
     setGuestScoreText();
     setGuestFoulsText();
     setPeriodText();
+    calculateLead();
 }
 
 function incrementHomeFouls(amount) {
@@ -121,4 +127,19 @@ function incrementHomeFouls(amount) {
 function incrementGuestFouls(amount) {
     guestFouls = Math.min(Math.max(guestFouls + amount, 0), 99);
     setGuestFoulsText();
+}
+
+function calculateLead(){
+    if (homeScore > guestScore) {
+        homeLead.textContent = "◀";
+        guestLead.textContent = "▷";
+    }
+    else if (guestScore > homeScore) {
+        homeLead.textContent = "◁";
+        guestLead.textContent = "▶";
+    }
+    else {
+        homeLead.textContent = "◁";
+        guestLead.textContent = "▷";
+    }
 }

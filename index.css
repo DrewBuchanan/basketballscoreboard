@@ -27,6 +27,10 @@ body {
     flex-grow: 1;
 }
 
+#home-container, #guest-container {
+    width: 185px;
+}
+
 #period-button-container {
     display: flex;
     justify-content: center;
@@ -44,6 +48,12 @@ body {
     margin: 12px 0px 0px 0px;
 }
 
+.horizontal-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .foul-container {
     display: flex;
     flex-direction: row;
@@ -52,10 +62,18 @@ body {
     height: 120px;
 }
 
-.foul-vertical-container {
+.foul-vertical-container-left, .foul-vertical-container-right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.foul-vertical-container-left {
+    margin-left: -10px;
+}
+
+.foul-vertical-container-right {
+    margin-right: -10px;
 }
 
 .left {
@@ -140,6 +158,14 @@ body {
     background-color: #1B244A;
     border-radius: 5px;
     border: 2px solid #9AABD8;
+}
+
+#home-lead, #guest-lead {
+    font-size: 40px;
+    margin-top: 10px;
+    line-height: 120px;
+    width: 35px;
+    color: #EEEEEE;
 }
 
 /*TODO: Button click effect*/
