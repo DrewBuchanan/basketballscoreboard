@@ -2,29 +2,25 @@
     margin: 0;
 }
 
+.debug {
+    border: 2px solid pink;
+}
+
 @font-face {
     font-family: numerals;
-    src: url(font/digital-7.ttf);
+    src: url(font/digital-7.mono.ttf);
 }
 
 body {
     background-color: #1B244A;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 .container {
     width: 575px;
-    margin: auto;
+    margin: 20px auto 0px auto;
     display: flex;
-    justify-content: space-around;
-}
-
-.team-name {
-    color: #EEEEEE;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40px;
-    font-weight: bold;
+    justify-content: space-between;
 }
 
 #period-button-container {
@@ -32,8 +28,24 @@ body {
     justify-content: center;
 }
 
-.numeral, .button{
-    font-family: numerals;
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin-top: 30px;
+}
+
+.team-name, .period-header {
+    color: #EEEEEE;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.period-header {
+    font-size: 24px;
+    margin-top: 20px;
 }
 
 .score {
@@ -44,7 +56,26 @@ body {
     width: 100px;
 }
 
+.timer {
+    width: 70%;
+}
+
+.timer-input {
+    height: 45px;
+    background-color: #9AABD8;
+    border-radius: 5px;
+    border: 2px solid #9AABD8;
+    text-align: center;
+    font-family: numerals;
+    font-size: 24px;
+}
+
+.timer-input:invalid:not(:focus) {
+    background: red;
+}
+
 .numeral {
+    font-family: numerals;
     background-color: #080001;
     color: #F94F6D;
     text-align: center;
@@ -64,8 +95,9 @@ body {
 }
 
 .button {
+    font-family: numerals;
     height: 45px;
-    margin: 20px 1.25px 0px 1.25px;
+    margin: 0px 1.25px 0px 1.25px;
     font-size: 18px;
     color: #9aabd8;
     background-color: #1B244A;
