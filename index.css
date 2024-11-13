@@ -4,27 +4,27 @@
 
 @font-face {
     font-family: numerals;
-    src: url(font/digital-7.ttf);
+    src: url(font/digital-7.mono.ttf);
 }
 
 body {
     background-color: #1B244A;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 .container {
     width: 575px;
-    margin: auto;
+    margin: 20px auto 0px auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.team-name {
-    color: #EEEEEE;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40px;
-    font-weight: bold;
+#period-container {
+    flex-grow: 1;
+}
+
+#home-container, #guest-container {
+    width: 185px;
 }
 
 #period-button-container {
@@ -32,8 +32,71 @@ body {
     justify-content: center;
 }
 
-.numeral, .button{
-    font-family: numerals;
+#home-container button, #guest-container button, #period-button-container button {
+    margin-top: 10px;
+}
+
+.vertical-container-left, .vertical-container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 15%;
+    margin: 12px 0px 0px 0px;
+    padding-bottom: 10px;
+}
+
+.vertical-container-left {
+    margin-right: 6px;
+}
+
+.vertical-container-right {
+    margin-left: 6px;
+}
+
+.horizontal-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.foul-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12px;
+    height: 110px;
+}
+
+.foul-vertical-container-left, .foul-vertical-container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.foul-vertical-container-left {
+    margin-left: -10px;
+}
+
+.foul-vertical-container-right {
+    margin-right: -10px;
+}
+
+.team-name, .period-header, .foul-header {
+    color: #EEEEEE;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.period-header {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.foul-header {
+    font-size: 24px;
+    margin-top: 45px;
 }
 
 .score {
@@ -44,12 +107,31 @@ body {
     width: 100px;
 }
 
+.timer {
+    width: 70%;
+}
+
+.timer-input {
+    height: 45px;
+    background-color: #9AABD8;
+    border-radius: 5px;
+    border: 2px solid #9AABD8;
+    text-align: center;
+    font-family: numerals;
+    font-size: 24px;
+}
+
+.timer-input:invalid:not(:focus) {
+    background: #F94F6D;
+}
+
 .numeral {
+    font-family: numerals;
     background-color: #080001;
     color: #F94F6D;
     text-align: center;
     border-radius: 5px;
-    margin: 30px auto 0px auto;
+    margin: 12px auto 0px auto;
     padding: 15px 0px;
     line-height: 90px;
     font-size: 90px;
@@ -60,17 +142,37 @@ body {
 }
 
 #resetbutton {
-    width: 100px;
+    width: 100%;
+    margin: 80px auto;
 }
 
 .button {
+    font-family: numerals;
     height: 45px;
-    margin: 20px 1.25px 0px 1.25px;
+    margin: 0px 1.25px 0px 1.25px;
     font-size: 18px;
+    font-weight: bold;
     color: #9aabd8;
-    background-color: #1B244A;
+    background-color: #114943;
     border-radius: 5px;
     border: 2px solid #9AABD8;
+    box-shadow: 0 9px #666;
 }
 
-/*TODO: Button click effect*/
+.button:enabled:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#home-lead, #guest-lead {
+    font-size: 40px;
+    margin-top: 10px;
+    line-height: 120px;
+    width: 35px;
+    color: #EEEEEE;
+}

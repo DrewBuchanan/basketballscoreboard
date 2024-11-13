@@ -3,32 +3,62 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div class="container">
-            <div id="home-container">
+        <div class="container debug">
+            <div class="vertical-container-left debug">
+                <button class="button" id="start-button" onclick="startClock()">Start</button>
+                <button class="button" id="pause-button" onclick="pauseClock()">Pause</button>
+            </div>
+            <h4 id="timer" class="numeral timer">20:00</h4>
+            <div class="vertical-container-right debug">
+                <input type="text" id="timer-input" class="timer-input" required pattern="[0-9]{1,2}:[0-9]{2}" value="20:00">
+                <button class="button" onclick="setClock()">Set</button>
+            </div>
+        </div>
+        <div class="container debug">
+            <div id="home-container" class="debug">
                 <h3 class="team-name">HOME</h3>
                 <h4 class="score numeral" id="home-score">0</h4>
-                <button class="increment button" onclick="home(1)">+ 1</button>
-                <button class="increment button" onclick="home(2)">+ 2</button>
-                <button class="increment button" onclick="home(3)">+ 3</button>
+                <div class="horizontal-container debug">
+                    <button class="increment button" onclick="home(1)">+ 1</button>
+                    <button class="increment button" onclick="home(2)">+ 2</button>
+                    <button class="increment button" onclick="home(3)">+ 3</button>
+                </div>
+                <h4 class="score numeral" id="home-fouls">0</h4>
             </div>
-            <div id="period-container">
-                <h3 class="team-name">PERIOD</h3>
-                <h4 class="period numeral" id="period">1</h4>
+            <div id="period-container" class="debug">
+                <h3 class="period-header">PERIOD</h3>
+                <div class="horizontal-container">
+                    <h4 id="home-lead" class="debug">◀</h4>
+                    <h4 class="period numeral" id="period">1</h4>
+                    <h4 id="guest-lead" class="debug">▶</h4>
+                </div>
                 <div id="period-button-container">
                     <button class="increment button" onclick="incrementPeriod(1)">+</button>
                     <button class="increment button" onclick="incrementPeriod(-1)">-</button>
                 </div>
+                <div class="foul-container debug">
+                    <div class="foul-vertical-container-left debug">
+                        <button class="increment button" onclick="incrementHomeFouls(1)">+</button>
+                        <button class="increment button" onclick="incrementHomeFouls(-1)">-</button>
+                    </div>
+                    <h3 class="foul-header">FOULS</h3>
+                    <div class="foul-vertical-container-right debug">
+                        <button class="increment button" onclick="incrementGuestFouls(1)">+</button>
+                        <button class="increment button" onclick="incrementGuestFouls(-1)">-</button>
+                    </div>
+                </div>
+                <button id="resetbutton" class="button" onclick="reset()">Reset All</button>
             </div>
-            <div id="guest-container">
+            <div id="guest-container" class="debug">
                 <h3 class="team-name">GUEST</h3>
-                <h4 class="score numeral" id="guest-score">69</h4>
-                <button class="increment button" onclick="guest(1)">+ 1</button>
-                <button class="increment button" onclick="guest(2)">+ 2</button>
-                <button class="increment button" onclick="guest(3)">+ 3</button>
+                <h4 class="score numeral" id="guest-score">0</h4>
+                <div class="horizontal-container">
+                    <button class="increment button" onclick="guest(1)">+ 1</button>
+                    <button class="increment button" onclick="guest(2)">+ 2</button>
+                    <button class="increment button" onclick="guest(3)">+ 3</button>
+                </div>
+                <h4 class="score numeral" id="guest-fouls">0</h4>
             </div>
-        </div>
-        <div class="container">
-            <button id="resetbutton" class="button" onclick="reset()">Reset</button>
         </div>
         <script src="index.js"></script>
     </body>
