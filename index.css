@@ -125,7 +125,7 @@ body {
 }
 
 .timer-input:invalid:not(:focus) {
-    background: red;
+    background: #F94F6D;
 }
 
 .numeral {
@@ -154,10 +154,22 @@ body {
     height: 45px;
     margin: 0px 1.25px 0px 1.25px;
     font-size: 18px;
+    font-weight: bold;
     color: #9aabd8;
-    background-color: #1B244A;
+    background-color: #114943;
     border-radius: 5px;
     border: 2px solid #9AABD8;
+    box-shadow: 0 9px #666;
+}
+
+.button:enabled:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 #home-lead, #guest-lead {
