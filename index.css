@@ -23,12 +23,16 @@ body {
     justify-content: space-between;
 }
 
+#period-container {
+    flex-grow: 1;
+}
+
 #period-button-container {
     display: flex;
     justify-content: center;
 }
 
-#home-container button, #guest-container button {
+#home-container button, #guest-container button, #period-button-container button {
     margin-top: 10px;
 }
 
@@ -37,10 +41,32 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 15%;
-    margin: 12px 6px 0px 6px;
+    margin: 12px 0px 0px 0px;
 }
 
-.team-name, .period-header {
+.foul-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12px;
+    height: 120px;
+}
+
+.foul-vertical-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left {
+    margin-right: 6px;
+}
+
+.right {
+    margin-left: 6px;
+}
+
+.team-name, .period-header, .foul-header {
     color: #EEEEEE;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -51,6 +77,11 @@ body {
 .period-header {
     font-size: 24px;
     margin-top: 20px;
+}
+
+.foul-header {
+    font-size: 24px;
+    margin-top: 45px;
 }
 
 .score {
@@ -97,7 +128,7 @@ body {
 
 #resetbutton {
     width: 100%;
-    margin: 20px auto;
+    margin: 80px auto;
 }
 
 .button {

@@ -30,11 +30,17 @@
                     <button class="increment button" onclick="incrementPeriod(1)">+</button>
                     <button class="increment button" onclick="incrementPeriod(-1)">-</button>
                 </div>
-                <button class="increment button">+</button>
-                <button class="increment button">-</button>
-                <h3 class="foul-header">FOULS</h3>
-                <button class="increment button">+</button>
-                <button class="increment button">-</button>
+                <div class="foul-container debug">
+                    <div class="foul-vertical-container right debug">
+                        <button class="increment button">+</button>
+                        <button class="increment button">-</button>
+                    </div>
+                    <h3 class="foul-header">FOULS</h3>
+                    <div class="foul-vertical-container left debug">
+                        <button class="increment button">+</button>
+                        <button class="increment button">-</button>
+                    </div>
+                </div>
                 <button id="resetbutton" class="button" onclick="reset()">Reset All</button>
             </div>
             <div id="guest-container" class="debug">
