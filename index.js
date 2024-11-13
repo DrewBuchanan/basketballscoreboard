@@ -22,6 +22,7 @@ const pauseButton = document.getElementById("pause-button");
 
 pauseButton.active = false;
 
+pauseClock();
 calculateLead();
 setHomeScoreText();
 setGuestScoreText();
