@@ -10,8 +10,8 @@
             </div>
             <h4 id="timer" class="numeral timer">20:00</h4>
             <div class="vertical-container debug">
-                <input type="text" class="timer-input" required pattern="[0-9]{1,2}:[0-9]{2}" value="00:00">
-                <button class="button">Set</button>
+                <input type="text" id="timer-input" class="timer-input" required pattern="[0-9]{1,2}:[0-9]{2}" value="20:00">
+                <button class="button" onclick="setClock()">Set</button>
             </div>
         </div>
         <div class="container debug">

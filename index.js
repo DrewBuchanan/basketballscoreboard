@@ -10,6 +10,7 @@ const homeScoreDisplay = document.getElementById("home-score");
 const guestScoreDisplay = document.getElementById("guest-score");
 const periodDisplay = document.getElementById("period");
 const timerDisplay = document.getElementById("timer");
+const timerInput = document.getElementById("timer-input")
 
 setHomeScoreText();
 setGuestScoreText();
@@ -23,6 +24,18 @@ function pauseClock() {
     clearInterval(timer);
 }
 
+function setClock() {
+    if (!timerInput.checkValidity()) {
+        alert("Invalid time. Please enter a time in the form of mm:ss");
+        return;
+    }
+    
+    const times = timerInput.value.split(":");
+    minutes = times[0];
+    seconds = times[1];
+    setClockText();
+}
+
 function clock() {
     seconds--;
     if (seconds < 0) {
@@ -34,8 +47,13 @@ function clock() {
         seconds = 0;
         pauseClock();
         alert("End of period");
+        clearInterval(timer);
     }
 
+    setClockText();
+}
+
+function setClockText() {
     timerDisplay.textContent = String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
 }
 
