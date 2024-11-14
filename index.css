@@ -5,15 +5,17 @@
     ---numeral: #F94F6D;
     ---buttonbackground: #114943;
     ---buttonbody: #666;
+    ---buttontext: #9AABD8;
 }
 
 .newPalette {
     ---background: #546d64;
     ---header: #e3c0d3;
     ---buttonborder: #BDC4A7;
-    ---numeral: #F94F6D;
-    ---buttonbackground: #BBA0CA;
+    ---numeral: #E3C0D3;
+    ---buttonbackground: #774C60;
     ---buttonbody: #666;
+    ---buttontext: #000;
 }
 
 * {
