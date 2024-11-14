@@ -73,6 +73,8 @@ function clock() {
         minutes = 0;
         seconds = 0;
         pauseClock();
+        var audio = new Audio('audio/buzzer.mp3');
+        audio.play();
         alert("End of period");
     }
 
