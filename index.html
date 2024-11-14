@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" href="index.css">
     </head>
-    <body>
+    <body class="originalpalette">
         <div class="container debug">
             <div class="vertical-container-left debug">
                 <button class="button" id="start-button" onclick="startClock()">Start</button>
@@ -59,6 +59,10 @@
                 </div>
                 <h4 class="score numeral" id="guest-fouls">0</h4>
             </div>
+        </div>
+        <div class="footer">
+            <span class="dot" style="background-color: #1B244A;" onclick="setColorScheme(1)"></span>
+            <span class="dot" style="background-color: #546d64;" onclick="setColorScheme(2)"></span>
         </div>
         <script src="index.js"></script>
     </body>
