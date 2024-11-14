@@ -28,6 +28,17 @@ setHomeScoreText();
 setGuestScoreText();
 setPeriodText();
 
+function setColorScheme(scheme) {
+    console.log("scheme");
+    document.body.className = "";
+    if (scheme == 1) {
+        document.body.classList = "originalpalette";
+    }
+    else if (scheme == 2) {
+        document.body.className = "newpalette"
+    }
+}
+
 function startClock() {
     timer = setInterval(clock, 1000);
     startButton.disabled = true;

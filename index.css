@@ -1,3 +1,21 @@
+.originalPalette {
+    ---background: #1B244A;
+    ---header: #EEEEEE;
+    ---buttonborder: #9AABD8;
+    ---numeral: #F94F6D;
+    ---buttonbackground: #114943;
+    ---buttonbody: #666;
+}
+
+.newPalette {
+    ---background: #546d64;
+    ---header: #e3c0d3;
+    ---buttonborder: #BDC4A7;
+    ---numeral: #F94F6D;
+    ---buttonbackground: #BBA0CA;
+    ---buttonbody: #666;
+}
+
 * {
     margin: 0;
 }
@@ -8,7 +26,7 @@
 }
 
 body {
-    background-color: #1B244A;
+    background-color: var(---background);
     padding-top: 60px;
 }
 
@@ -82,7 +100,7 @@ body {
 }
 
 .team-name, .period-header, .foul-header {
-    color: #EEEEEE;
+    color: var(---header);
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 40px;
@@ -113,22 +131,22 @@ body {
 
 .timer-input {
     height: 45px;
-    background-color: #9AABD8;
+    background-color: var(---buttonborder);
     border-radius: 5px;
-    border: 2px solid #9AABD8;
+    border: 2px solid var(---buttonborder);
     text-align: center;
     font-family: numerals;
     font-size: 24px;
 }
 
 .timer-input:invalid:not(:focus) {
-    background: #F94F6D;
+    background: var(---numeral);
 }
 
 .numeral {
     font-family: numerals;
     background-color: #080001;
-    color: #F94F6D;
+    color: var(---numeral);
     text-align: center;
     border-radius: 5px;
     margin: 12px auto 0px auto;
@@ -152,15 +170,15 @@ body {
     margin: 0px 1.25px 0px 1.25px;
     font-size: 18px;
     font-weight: bold;
-    color: #9aabd8;
-    background-color: #114943;
+    color: var(---buttonborder);
+    background-color: var(---buttonbackground);
     border-radius: 5px;
-    border: 2px solid #9AABD8;
-    box-shadow: 0 9px #666;
+    border: 2px solid var(---buttonborder);
+    box-shadow: 0 9px var(---buttonbody);
 }
 
 .button:enabled:active {
-    box-shadow: 0 5px #666;
+    box-shadow: 0 5px var(---buttonbody);
     transform: translateY(4px);
 }
 
@@ -174,5 +192,23 @@ body {
     margin-top: 10px;
     line-height: 120px;
     width: 35px;
-    color: #EEEEEE;
+    color: var(---header);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.dot {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    margin: 0 6px;
+    border-radius: 50%;
+    border: 2px solid #EEEEEE;
 }
